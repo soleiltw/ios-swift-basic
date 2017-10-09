@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Heyo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlr-cG-PPI">
+                                <rect key="frame" x="166.5" y="114" width="42" height="42"/>
+                                <state key="normal" backgroundImage="Smile"/>
+                                <state key="selected" backgroundImage="Happy"/>
+                                <state key="highlighted" backgroundImage="Happy"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRp-HM-jd7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I80-de-fnJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.72941176470000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="n61-kI-yYA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xlr-cG-PPI" firstAttribute="top" secondItem="hdG-mh-Lti" secondAttribute="top" constant="94" id="DlI-6g-qg6"/>
+                            <constraint firstItem="hdG-mh-Lti" firstAttribute="trailing" secondItem="I80-de-fnJ" secondAttribute="trailing" id="GBU-UO-K2q"/>
+                            <constraint firstItem="xlr-cG-PPI" firstAttribute="centerX" secondItem="hdG-mh-Lti" secondAttribute="centerX" id="ODN-1f-aSf"/>
+                            <constraint firstItem="I80-de-fnJ" firstAttribute="leading" secondItem="hdG-mh-Lti" secondAttribute="leading" id="s4u-Yq-5W7"/>
+                            <constraint firstItem="I80-de-fnJ" firstAttribute="top" secondItem="hdG-mh-Lti" secondAttribute="top" constant="8" id="tNi-ro-j0s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hdG-mh-Lti"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="I80-de-fnJ" id="bXV-Y6-yoJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Happy" width="42" height="42"/>
+        <image name="Smile" width="42" height="42"/>
+    </resources>
+</document>
