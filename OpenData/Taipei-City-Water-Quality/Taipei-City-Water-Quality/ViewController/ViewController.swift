@@ -12,7 +12,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let openDataURL : NSURL = NSURL(string: "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=190796c8-7c56-42e0-8068-39242b8ec927")!
+    let openDataURL : URL = URL(string: "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=190796c8-7c56-42e0-8068-39242b8ec927")!
     
     var stations = [Station]()
     
@@ -73,7 +73,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     self.stations.removeAll()
                     results.forEach({ (object) -> () in
-//                        print("Each Result: \(object)")
                         let station : Station = Station.populate(dictionary: object)
                         self.stations.append(station)
                     })

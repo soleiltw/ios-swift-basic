@@ -35,7 +35,8 @@ class Station {
     class func DateFromString(dateString:String, timeString:String) -> Date
     {
         let dateFormatter = DateFormatter()
-        let enUSPosixLocale = NSLocale(localeIdentifier: "en_US_POSIX")
+        
+        let enUSPosixLocale = Locale(identifier: "en_US_POSIX")
         dateFormatter.locale = enUSPosixLocale as Locale!
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return dateFormatter.date(from: "\(dateString) \(timeString)")!
