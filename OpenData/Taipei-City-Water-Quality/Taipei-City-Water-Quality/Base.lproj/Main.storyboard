@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="54"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-I5-NxR">
-                                        <rect key="frame" x="0.0" y="13.5" width="359" height="29"/>
+                                        <rect key="frame" x="8" y="13.5" width="359" height="29"/>
                                         <segments>
                                             <segment title="List"/>
                                             <segment title="Map"/>
@@ -46,36 +46,100 @@
                                 <rect key="frame" x="0.0" y="118" width="375" height="549"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationInfoCell" rowHeight="100" id="hxT-r2-EYb" customClass="StationViewCell" customModule="Taipei_City_Water_Quality" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationInfoCell" rowHeight="75" id="hxT-r2-EYb" customClass="StationViewCell" customModule="Taipei_City_Water_Quality" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hxT-r2-EYb" id="4aX-aC-uQr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OUe-VE-Ets">
-                                                    <rect key="frame" x="8" y="8" width="134" height="20.5"/>
+                                                    <rect key="frame" x="8" y="8" width="134" height="22.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CS00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VO-Ll-1xM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="43" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="43" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雙溪淨水場" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4J-5v-0T9">
-                                                            <rect key="frame" x="47" y="0.0" width="87" height="20.5"/>
+                                                            <rect key="frame" x="47" y="0.0" width="87" height="22.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WtN-EW-eiW">
+                                                    <rect key="frame" x="8" y="38.5" width="359" height="20.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Az-Qv-McI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="123" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E35-Cd-dQo">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="濁度(NTU)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-Op-HYa">
+                                                                    <rect key="frame" x="41" y="0.0" width="82" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zf5-5e-n4A">
+                                                            <rect key="frame" x="127" y="0.0" width="118" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSc-rq-orf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="餘氯(mg/L)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoe-zW-Ffz">
+                                                                    <rect key="frame" x="32" y="0.0" width="86" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-zK-htL">
+                                                            <rect key="frame" x="249" y="0.0" width="110" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-DL-drC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 酸度(pH) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-mp-7G4">
+                                                                    <rect key="frame" x="32" y="0.0" width="78" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OUe-VE-Ets" firstAttribute="top" secondItem="4aX-aC-uQr" secondAttribute="top" constant="8" id="7Mp-8M-eiT"/>
+                                                <constraint firstItem="WtN-EW-eiW" firstAttribute="leading" secondItem="4aX-aC-uQr" secondAttribute="leading" constant="8" id="9l1-x1-v0m"/>
+                                                <constraint firstItem="WtN-EW-eiW" firstAttribute="top" secondItem="OUe-VE-Ets" secondAttribute="bottom" constant="8" id="bcM-6k-0Yn"/>
+                                                <constraint firstAttribute="trailing" secondItem="WtN-EW-eiW" secondAttribute="trailing" constant="8" id="ihY-5K-V2n"/>
+                                                <constraint firstAttribute="bottom" secondItem="WtN-EW-eiW" secondAttribute="bottom" priority="750" constant="16" id="ily-fS-lhK"/>
                                                 <constraint firstItem="OUe-VE-Ets" firstAttribute="leading" secondItem="4aX-aC-uQr" secondAttribute="leading" constant="8" id="uzQ-hW-bag"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="codeNameLabel" destination="l4J-5v-0T9" id="je2-4q-fUo"/>
+                                            <outlet property="quaIdLabel" destination="6VO-Ll-1xM" id="3bh-ZN-2Ya"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

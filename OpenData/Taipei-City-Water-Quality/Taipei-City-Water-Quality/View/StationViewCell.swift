@@ -9,10 +9,16 @@
 import UIKit
 
 class StationViewCell: UITableViewCell {
+    
+    @IBOutlet weak var quaIdLabel: UILabel!
+    @IBOutlet weak var codeNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func layoutSubviews() {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
