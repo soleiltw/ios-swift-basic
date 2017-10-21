@@ -119,10 +119,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let station : Station = self.stations[indexPath.row]
         
         let stationCell : StationViewCell = cell as! StationViewCell
-        stationCell.quaIdLabel.text = station.qua_id
+        stationCell.quaIdLabel.text = station.qua_id.trim()
         stationCell.quaIdLabel.sizeToFit()
+//        stationCell.quaIdLabel.layoutIfNeeded()
         
-        stationCell.codeNameLabel.text = station.code_name
+        stationCell.codeNameLabel.text = station.code_name.trim()
+        stationCell.codeNameLabel.sizeToFit()
+//        stationCell.codeNameLabel.layoutIfNeeded()
         
         return cell
     }

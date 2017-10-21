@@ -14,6 +14,7 @@
 		1C2A7FF61F9B959C00928375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2A7FF41F9B959C00928375 /* LaunchScreen.storyboard */; };
 		1C2A80001F9B9ACE00928375 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A7FFF1F9B9ACE00928375 /* Station.swift */; };
 		1C2A80031F9B9C9400928375 /* StationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A80021F9B9C9400928375 /* StationViewCell.swift */; };
+		1C2A80061F9BCC3B00928375 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A80051F9BCC3A00928375 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1C2A7FF71F9B959C00928375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2A7FFF1F9B9ACE00928375 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		1C2A80021F9B9C9400928375 /* StationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewCell.swift; sourceTree = "<group>"; };
+		1C2A80051F9BCC3A00928375 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		1C2A7FEA1F9B959B00928375 /* Taipei-City-Water-Quality */ = {
 			isa = PBXGroup;
 			children = (
+				1C2A80041F9BCC0400928375 /* Extension */,
 				1C2A7FFE1F9B9AA200928375 /* Object */,
 				1C2A7FFD1F9B95AA00928375 /* ViewController */,
 				1C2A80011F9B9C7D00928375 /* View */,
@@ -92,6 +95,14 @@
 				1C2A80021F9B9C9400928375 /* StationViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1C2A80041F9BCC0400928375 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C2A80051F9BCC3A00928375 /* String+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				1C2A7FEE1F9B959B00928375 /* ViewController.swift in Sources */,
 				1C2A80031F9B9C9400928375 /* StationViewCell.swift in Sources */,
 				1C2A80001F9B9ACE00928375 /* Station.swift in Sources */,
+				1C2A80061F9BCC3B00928375 /* String+Extension.swift in Sources */,
 				1C2A7FEC1F9B959B00928375 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
