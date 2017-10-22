@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-DX-gFl">
+                                <rect key="frame" x="116" y="96" width="143" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ao-hl-CVf">
+                                <rect key="frame" x="149" y="318" width="76" height="30"/>
+                                <state key="normal" title="PickerView"/>
+                                <connections>
+                                    <action selector="pickerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVV-PA-f9s"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xa-Gk-2oy">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="BHP-qs-u2x"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4hv-f3-mh6"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7xa-Gk-2oy" secondAttribute="bottom" id="7GR-el-dgl"/>
+                            <constraint firstItem="ZlG-DX-gFl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GFz-jI-3T8"/>
+                            <constraint firstAttribute="trailing" secondItem="7xa-Gk-2oy" secondAttribute="trailing" id="KU6-yf-Xn0"/>
+                            <constraint firstItem="7xa-Gk-2oy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LjX-d7-lap"/>
+                            <constraint firstItem="3Ao-hl-CVf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WIY-p6-S2N"/>
+                            <constraint firstItem="ZlG-DX-gFl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="76" id="tGd-Fg-zFM"/>
+                            <constraint firstItem="3Ao-hl-CVf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zCs-HY-IDJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="7xa-Gk-2oy" id="n5D-lp-wu6"/>
+                        <outlet property="resultLabel" destination="ZlG-DX-gFl" id="4gC-nc-PTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
