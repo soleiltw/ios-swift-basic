@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloIndicator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="RXF-Ix-Y09">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Pg-L1-ydh">
+                                <rect key="frame" x="60" y="384" width="255" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SP1-w6-HPc">
+                                <rect key="frame" x="164.5" y="621" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="animateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAM-3H-n8l"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-W3-zL5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="585"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RXF-Ix-Y09" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6aN-RE-dJC"/>
+                            <constraint firstItem="bxx-kf-NcL" firstAttribute="bottom" secondItem="GBa-W3-zL5" secondAttribute="bottom" constant="62" id="DJy-pq-266"/>
+                            <constraint firstItem="GBa-W3-zL5" firstAttribute="top" secondItem="bxx-kf-NcL" secondAttribute="top" id="TlX-cF-nSw"/>
+                            <constraint firstItem="bxx-kf-NcL" firstAttribute="trailing" secondItem="2Pg-L1-ydh" secondAttribute="trailing" constant="60" id="VYY-uf-58C"/>
+                            <constraint firstItem="bxx-kf-NcL" firstAttribute="bottom" secondItem="SP1-w6-HPc" secondAttribute="bottom" constant="16" id="WE4-cu-Lqa"/>
+                            <constraint firstItem="bxx-kf-NcL" firstAttribute="trailing" secondItem="GBa-W3-zL5" secondAttribute="trailing" id="Xbq-oA-3E3"/>
+                            <constraint firstItem="RXF-Ix-Y09" firstAttribute="centerX" secondItem="bxx-kf-NcL" secondAttribute="centerX" id="aMy-Wt-sqf"/>
+                            <constraint firstItem="2Pg-L1-ydh" firstAttribute="centerX" secondItem="bxx-kf-NcL" secondAttribute="centerX" id="cQA-pp-qy6"/>
+                            <constraint firstItem="GBa-W3-zL5" firstAttribute="leading" secondItem="bxx-kf-NcL" secondAttribute="leading" id="eup-Es-j6O"/>
+                            <constraint firstItem="2Pg-L1-ydh" firstAttribute="leading" secondItem="bxx-kf-NcL" secondAttribute="leading" constant="60" id="foB-dL-dtm"/>
+                            <constraint firstItem="2Pg-L1-ydh" firstAttribute="top" secondItem="RXF-Ix-Y09" secondAttribute="bottom" constant="32" id="kdx-a1-qHR"/>
+                            <constraint firstItem="SP1-w6-HPc" firstAttribute="centerX" secondItem="bxx-kf-NcL" secondAttribute="centerX" id="rLW-gJ-R9J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bxx-kf-NcL"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="RXF-Ix-Y09" id="tBZ-iH-w0c"/>
+                        <outlet property="imageView" destination="GBa-W3-zL5" id="9eF-rj-Wgh"/>
+                        <outlet property="progressView" destination="2Pg-L1-ydh" id="mF3-45-yzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
