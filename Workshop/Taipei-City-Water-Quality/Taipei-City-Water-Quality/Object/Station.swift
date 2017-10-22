@@ -9,10 +9,12 @@ import Foundation
 
 class Station {
     
+    // Swift Advance
     enum Result {
         case normal, notNormal
     }
     
+    // Swfit Basic
     var update_date: String = ""
     var update_time: String = ""
     var qua_id: String = ""

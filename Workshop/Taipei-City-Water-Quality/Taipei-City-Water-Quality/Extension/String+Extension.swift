@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Swift Advance
 extension String
 {
     func trim() -> String
