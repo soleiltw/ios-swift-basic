@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
     
     let openDataURL : URL = URL(string: "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=190796c8-7c56-42e0-8068-39242b8ec927")!
     
@@ -75,6 +75,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     results.forEach({ (object) -> () in
                         let station : Station = Station.populate(dictionary: object)
                         self.stations.append(station)
+                        
+                        // Drop a pin at user's Current Location
+                        let stationAnnotation: MKPointAnnotation = MKPointAnnotation()
+                        stationAnnotation.coordinate = CLLocationCoordinate2DMake(Double(station.latitude)!, Double(station.longitude)!);
+                        stationAnnotation.title = station.code_name
+                        if (station.checkPh() == .normal) && (station.checkCl() == .normal) && (station.checkCntu() == .normal) {
+                            stationAnnotation.subtitle = "Normal"
+                        }
+                        self.mapView.addAnnotation(stationAnnotation)
                     })
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -95,6 +104,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         case 1:
             self.tableView.isHidden = true
             self.mapView.isHidden = false
+            self.mapView.showAnnotations(self.mapView.annotations, animated: true)
             break
         default:
             self.tableView.isHidden = false
@@ -119,12 +129,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let stationCell : StationViewCell = cell as! StationViewCell
         stationCell.quaIdLabel.text = station.qua_id.trim()
-        stationCell.quaIdLabel.sizeToFit()
-//        stationCell.quaIdLabel.layoutIfNeeded()
-        
         stationCell.codeNameLabel.text = station.code_name.trim()
-        stationCell.codeNameLabel.sizeToFit()
-//        stationCell.codeNameLabel.layoutIfNeeded()
+        stationCell.phValueLabel.text = station.qua_ph
+        stationCell.mglValueLabel.text = station.qua_cl
+        
+        stationCell.ntuValueLabel.text = station.qua_cntu
+        if station.checkCntu() == .normal {
+            stationCell.ntuValueLabel.textColor = UIColor.blue
+        }
+        if station.checkCl() == .normal {
+            stationCell.mglValueLabel.textColor = UIColor.blue
+        }
+        if station.checkPh() == .normal {
+            stationCell.phValueLabel.textColor = UIColor.blue
+        }
         
         return cell
     }

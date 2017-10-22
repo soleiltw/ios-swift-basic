@@ -12,6 +12,15 @@ class StationViewCell: UITableViewCell {
     
     @IBOutlet weak var quaIdLabel: UILabel!
     @IBOutlet weak var codeNameLabel: UILabel!
+    
+    @IBOutlet weak var ntuLabel: UILabel!
+    @IBOutlet weak var mglLabel: UILabel!
+    @IBOutlet weak var phLabel: UILabel!
+    
+    @IBOutlet weak var ntuValueLabel: UILabel!
+    @IBOutlet weak var mglValueLabel: UILabel!
+    @IBOutlet weak var phValueLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +28,7 @@ class StationViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
+        self.quaIdLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

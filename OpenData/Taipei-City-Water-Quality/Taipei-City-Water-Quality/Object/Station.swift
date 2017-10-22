@@ -9,6 +9,10 @@ import Foundation
 
 class Station {
     
+    enum Result {
+        case normal, notNormal
+    }
+    
     var update_date: String = ""
     var update_time: String = ""
     var qua_id: String = ""
@@ -30,6 +34,30 @@ class Station {
         qua_cntu = dictionary["qua_cntu"] as! String
         qua_cl = dictionary["qua_cl"] as! String
         qua_ph = dictionary["qua_ph"] as! String
+    }
+    
+    func checkCntu() -> Result {
+        if Double(self.qua_cntu)! < 0.3 {
+            return .normal
+        } else {
+            return .notNormal
+        }
+    }
+    
+    func checkCl() -> Result {
+        if Double(self.qua_cl)! > 0.2 && Double(self.qua_cl)! < 2.0 {
+            return .normal
+        } else {
+            return .notNormal
+        }
+    }
+    
+    func checkPh() -> Result {
+        if Double(self.qua_ph)! > 6 && Double(self.qua_ph)! < 8.5 {
+            return .normal
+        } else {
+            return .notNormal
+        }
     }
     
     class func DateFromString(dateString:String, timeString:String) -> Date
