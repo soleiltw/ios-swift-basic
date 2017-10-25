@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C2A7FE81F9B959B00928375 /* Taipei-City-Water-Quality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Taipei-City-Water-Quality.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C2A7FE81F9B959B00928375 /* 台北市水質.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "台北市水質.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2A7FEB1F9B959B00928375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C2A7FED1F9B959B00928375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C2A7FF01F9B959C00928375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		1C2A7FE91F9B959B00928375 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C2A7FE81F9B959B00928375 /* Taipei-City-Water-Quality.app */,
+				1C2A7FE81F9B959B00928375 /* 台北市水質.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			);
 			name = "Taipei-City-Water-Quality";
 			productName = "Taipei-City-Water-Quality";
-			productReference = 1C2A7FE81F9B959B00928375 /* Taipei-City-Water-Quality.app */;
+			productReference = 1C2A7FE81F9B959B00928375 /* 台北市水質.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -258,6 +258,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "台北市水質";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -308,6 +309,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "台北市水質";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -323,7 +325,7 @@
 				INFOPLIST_FILE = "Taipei-City-Water-Quality/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.soleil.Taipei-City-Water-Quality";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "台北市水質";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,7 +340,7 @@
 				INFOPLIST_FILE = "Taipei-City-Water-Quality/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.soleil.Taipei-City-Water-Quality";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "台北市水質";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
