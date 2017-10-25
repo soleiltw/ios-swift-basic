@@ -88,7 +88,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         // Drop a pin at user's Current Location
                         let stationAnnotation: MKPointAnnotation = MKPointAnnotation()
                         stationAnnotation.coordinate = CLLocationCoordinate2DMake(Double(station.latitude)!, Double(station.longitude)!);
-                        stationAnnotation.title = station.code_name
+                        stationAnnotation.title = station.codeName
                         if (station.checkPh() == .normal) && (station.checkCl() == .normal) && (station.checkCntu() == .normal) {
                             stationAnnotation.subtitle = "Normal"
                         }
@@ -139,12 +139,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let station : Station = self.stations[indexPath.row]
         
         let stationCell : StationViewCell = cell as! StationViewCell
-        stationCell.quaIdLabel.text = station.qua_id.trim()
-        stationCell.codeNameLabel.text = station.code_name.trim()
-        stationCell.phValueLabel.text = station.qua_ph
-        stationCell.mglValueLabel.text = station.qua_cl
+        stationCell.quaIdLabel.text = station.quaId.trim()
+        stationCell.codeNameLabel.text = station.codeName.trim()
+        stationCell.phValueLabel.text = station.quaPh
+        stationCell.mglValueLabel.text = station.quaCl
         
-        stationCell.ntuValueLabel.text = station.qua_cntu
+        stationCell.ntuValueLabel.text = station.quaCntu
         if station.checkCntu() == .normal {
             stationCell.ntuValueLabel.textColor = UIColor.blue
         }
@@ -160,7 +160,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (self.stations.count > 0) {
-            return "\(self.stations[0].update_date) \(self.stations[0].update_time)"
+            return "\(self.stations[0].updateDate) \(self.stations[0].updateTime)"
         }
         return nil
     }
