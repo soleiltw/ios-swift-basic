@@ -19,7 +19,7 @@ class Station {
     var update_time : String = ""
     var qua_id: String = ""
     var code_name: String = ""
-    var langitude : String = ""
+    var longitude : String = ""
     var latitude : String = ""
     var qua_cntu : String = ""
     var qua_cl: String = ""
@@ -30,11 +30,11 @@ class Station {
         update_date = dictionary["update_date"] as! String
         qua_id = dictionary["qua_id"] as! String
         code_name = dictionary["code_name"] as! String
-        langitude = dictionary["langitude"] as! String
+        longitude = dictionary["longitude"] as! String
         latitude = dictionary["latitude"] as! String
         qua_cntu = dictionary["qua_cntu"] as! String
         qua_cl = dictionary["qua_cl"] as! String
-        qua_ph = dictionary["code_qua_phname"] as! String
+        qua_ph = dictionary["qua_ph"] as! String
     }
     
     func checkCntu() -> WaterQualityResult {
